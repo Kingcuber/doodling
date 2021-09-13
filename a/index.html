@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../../general/vector.js"></script>
+    <script type="text/javascript" src="../../general/particle.js"></script>
+    <script type="text/javascript" src="../../general/utils.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0px;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      #overlay {
+        position: fixed;
+        vertical-align: middle;
+        width: 60px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        overflow: auto;
+      }
+
+      .icon {
+        float: left;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #555;
+        text-align: center;
+        width: 100%;
+        color: white;
+      }
+
+      .icon:hover {
+        background-color: #000;
+      }
+
+      .icon.active {
+        background-color: #04aa6d;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/998a7fc77c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="overlay">
+      <div onclick="togglePlay(this)" class="icon">
+        <i id="play" class="fa fa-pause-circle fa-play-circle"></i>
+      </div>
+    </div>
+  </body>
+</html>

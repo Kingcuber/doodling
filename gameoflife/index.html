@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../../general/vector.js"></script>
+    <script type="text/javascript" src="../../general/particle.js"></script>
+    <script type="text/javascript" src="../../general/utils.js"></script>
+    <style>
+      html,
+      body {
+        margin: 0px;
+      }
+
+      canvas {
+        display: block;
+      }
+
+      #overlay {
+        position: fixed;
+        vertical-align: middle;
+        padding-left: 10px;
+        width: 180px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        overflow: auto;
+      }
+
+      .icon {
+        float: left;
+        padding: 12px;
+        background-color: #555;
+        text-align: center;
+        width: 20%;
+        color: white;
+      }
+
+      .icon:hover {
+        background-color: #000;
+      }
+
+      .icon.active {
+        background-color: #04aa6d;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/998a7fc77c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="overlay">
+      <div onclick="togglePlay(this)" class="icon">
+        <i id="play" class="fa fa-pause-circle fa-play-circle"></i>
+      </div>
+      <div id="step" onclick="toggleStep(this)" class="icon active">
+        <i class="fa fa-step-forward"></i>
+      </div>
+      <div id="fast" onclick="toggleFast(this)" class="icon">
+        <i class="fa fa-fast-forward"></i>
+      </div>
+    </div>
+  </body>
+</html>
