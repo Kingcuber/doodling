@@ -1,6 +1,6 @@
 let grey = "#A6A198";
 let boidColor = "#F28C0F";
-let numBoids = 1000;
+let numBoids = 500;
 let boids = [];
 let r = 5;
 let maxSpeed = 4;
